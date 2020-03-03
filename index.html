@@ -28,15 +28,19 @@
         w = d.AveragePrice * 500;
         return w + 'px';
       })
-      .attr('class', 'bar');
-
-    d3.select('svg')
-      .data(data)
-      .enter()
+      .attr('class', 'bar')
       .append('text', function(d) {
         year = d.year
         return year;
-      })
+        })
+
+    // d3.select('svg')
+    //   .data(data)
+    //   .enter()
+    //   .append('text', function(d) {
+    //     year = d.year
+    //     return year;
+      // })
     });
 
   </script>
