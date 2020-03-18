@@ -1,0 +1,126 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v4.min.js"> </script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- <script>
+    var data;
+    // var w = 500;
+    // var h = 4;
+
+    d3.json("df.json", function(error, json) {
+
+      if (error) {
+        console.log("error data");
+      } else {
+        data = json
+        console.log(data);
+      }
+
+    var svg = d3.select('body')
+      .data(data)
+      .enter()
+      .append('div')
+      .attr('width', function(d) {
+        w = d.ASP_max * 500;
+        return w + 'px';
+      })
+      .attr('height, 24px')
+      // .attr('class', 'bar')
+
+      append('text', function(d) {
+        year = d.month_year
+        return year;
+        })
+
+    // d3.select('svg')
+    //   .data(data)
+    //   .enter()
+    //   .append('text', function(d) {
+    //     year = d.year
+    //     return year;
+      // })
+    });
+
+  </script> -->
+
+  <script>
+
+    d3.json("df.json", function(error, json) {
+      var margin = {
+            top: 15,
+            right: 25,
+            bottom: 15,
+            left: 60
+        };
+
+        var width = 960 - margin.left - margin.right,
+            height = 3000 - margin.top - margin.bottom;
+
+        var svg = d3.select("body").append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        var x = d3.scaleLinear()
+            .range([0, width])
+            .domain([0, d3.max(json, function (d) {
+                return d.ASP_min;
+            })]);
+
+        var y = d3.scaleBand()
+            .rangeRound([0, width])
+            .domain(json.map(function (d) {
+                return d.month_year;
+            }));
+
+        //make y axis to show bar names
+        // var yAxis = d3.svg.axis()
+        //     .scale(y)
+        //     //no tick marks
+        //     .tickSize(0)
+        //     .orient("left");
+
+        // var gy = svg.append("g")
+        //     .attr("class", "y axis")
+        //     .call(yAxis)
+
+        var bars = svg.selectAll(".bar")
+            .data(json)
+            .enter()
+            .append("g")
+
+        //append rects
+        bars.append("rect")
+            .attr("background-color", '#568203')
+            .attr("y", function (d) {
+                return y(d.month_year);
+            })
+            // .attr("height", y.scaleBand())
+            .attr("x", 0)
+            .attr("width", function (d) {
+                return x(d.ASP_min);
+            });
+
+        //add a value label to the right of each bar
+        bars.append("text")
+            .attr("class", "label")
+            //y position of the label is halfway down the bar
+            // .attr("y", function (d) {
+            //     return y(d.month_year) + y.scaleBand() / 2 + 4;
+            // })
+            //x position is 3 pixels to the right of the bar
+            .attr("x", function (d) {
+                return x(d.ASP_min) + 3;
+            })
+            .text(function (d) {
+                return d.ASP_min;
+            });
+    });
+
+  </script> -->

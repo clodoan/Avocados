@@ -1,5 +1,6 @@
-.bar {
+.label {
   /* display: inline-block; */
   background-color: #568203;
-  height: 2px;
+  height: 2px
+  font-family: sans-serif;
 }

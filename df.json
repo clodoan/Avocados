@@ -1,0 +1,786 @@
+[
+  {
+    "month_year": "2015-01",
+    "type": "Conventional",
+    "ASP_min": 0.61,
+    "ASP_max": 1.54,
+    "State_Min": "PhoenixTucson",
+    "State_Max": "Pittsburgh"
+  },
+  {
+    "month_year": "2015-01",
+    "type": "Organic",
+    "ASP_min": 0.98,
+    "ASP_max": 2.35,
+    "State_Min": "NewOrleansMobile",
+    "State_Max": "HartfordSpringfield"
+  },
+  {
+    "month_year": "2015-02",
+    "type": "Conventional",
+    "ASP_min": 0.56,
+    "ASP_max": 1.44,
+    "State_Min": "PhoenixTucson",
+    "State_Max": "BuffaloRochester"
+  },
+  {
+    "month_year": "2015-02",
+    "type": "Organic",
+    "ASP_min": 1.06,
+    "ASP_max": 2.38,
+    "State_Min": "SanFrancisco",
+    "State_Max": "HartfordSpringfield"
+  },
+  {
+    "month_year": "2015-03",
+    "type": "Conventional",
+    "ASP_min": 0.57,
+    "ASP_max": 1.47,
+    "State_Min": "PhoenixTucson",
+    "State_Max": "BuffaloRochester"
+  },
+  {
+    "month_year": "2015-03",
+    "type": "Organic",
+    "ASP_min": 1.09,
+    "ASP_max": 2.27,
+    "State_Min": "Denver",
+    "State_Max": "HartfordSpringfield"
+  },
+  {
+    "month_year": "2015-04",
+    "type": "Conventional",
+    "ASP_min": 0.51,
+    "ASP_max": 1.5,
+    "State_Min": "PhoenixTucson",
+    "State_Max": "Pittsburgh"
+  },
+  {
+    "month_year": "2015-04",
+    "type": "Organic",
+    "ASP_min": 0.94,
+    "ASP_max": 2.27,
+    "State_Min": "Roanoke",
+    "State_Max": "HartfordSpringfield"
+  },
+  {
+    "month_year": "2015-05",
+    "type": "Conventional",
+    "ASP_min": 0.56,
+    "ASP_max": 1.46,
+    "State_Min": "PhoenixTucson",
+    "State_Max": "Pittsburgh"
+  },
+  {
+    "month_year": "2015-05",
+    "type": "Organic",
+    "ASP_min": 0.81,
+    "ASP_max": 2.36,
+    "State_Min": "Columbus",
+    "State_Max": "HartfordSpringfield"
+  },
+  {
+    "month_year": "2015-06",
+    "type": "Conventional",
+    "ASP_min": 0.52,
+    "ASP_max": 1.54,
+    "State_Min": "PhoenixTucson",
+    "State_Max": "SanFrancisco"
+  },
+  {
+    "month_year": "2015-06",
+    "type": "Organic",
+    "ASP_min": 1.08,
+    "ASP_max": 2.4,
+    "State_Min": "Roanoke",
+    "State_Max": "HartfordSpringfield"
+  },
+  {
+    "month_year": "2015-07",
+    "type": "Conventional",
+    "ASP_min": 0.56,
+    "ASP_max": 1.58,
+    "State_Min": "PhoenixTucson",
+    "State_Max": "SanFrancisco"
+  },
+  {
+    "month_year": "2015-07",
+    "type": "Organic",
+    "ASP_min": 0.99,
+    "ASP_max": 2.75,
+    "State_Min": "Indianapolis",
+    "State_Max": "SanFrancisco"
+  },
+  {
+    "month_year": "2015-08",
+    "type": "Conventional",
+    "ASP_min": 0.66,
+    "ASP_max": 1.59,
+    "State_Min": "PhoenixTucson",
+    "State_Max": "SanFrancisco"
+  },
+  {
+    "month_year": "2015-08",
+    "type": "Organic",
+    "ASP_min": 1,
+    "ASP_max": 2.77,
+    "State_Min": "TotalUS",
+    "State_Max": "SanFrancisco"
+  },
+  {
+    "month_year": "2015-09",
+    "type": "Conventional",
+    "ASP_min": 0.58,
+    "ASP_max": 1.59,
+    "State_Min": "PhoenixTucson",
+    "State_Max": "BuffaloRochester"
+  },
+  {
+    "month_year": "2015-09",
+    "type": "Organic",
+    "ASP_min": 1.31,
+    "ASP_max": 2.79,
+    "State_Min": "Nashville",
+    "State_Max": "SanFrancisco"
+  },
+  {
+    "month_year": "2015-10",
+    "type": "Conventional",
+    "ASP_min": 0.65,
+    "ASP_max": 1.58,
+    "State_Min": "PhoenixTucson",
+    "State_Max": "SanFrancisco"
+  },
+  {
+    "month_year": "2015-10",
+    "type": "Organic",
+    "ASP_min": 1.13,
+    "ASP_max": 2.79,
+    "State_Min": "Roanoke",
+    "State_Max": "SanFrancisco"
+  },
+  {
+    "month_year": "2015-11",
+    "type": "Conventional",
+    "ASP_min": 0.6,
+    "ASP_max": 1.41,
+    "State_Min": "PhoenixTucson",
+    "State_Max": "Syracuse"
+  },
+  {
+    "month_year": "2015-11",
+    "type": "Organic",
+    "ASP_min": 0.88,
+    "ASP_max": 2.58,
+    "State_Min": "Denver",
+    "State_Max": "SanFrancisco"
+  },
+  {
+    "month_year": "2015-12",
+    "type": "Conventional",
+    "ASP_min": 0.49,
+    "ASP_max": 1.37,
+    "State_Min": "PhoenixTucson",
+    "State_Max": "BuffaloRochester"
+  },
+  {
+    "month_year": "2015-12",
+    "type": "Organic",
+    "ASP_min": 0.87,
+    "ASP_max": 2.34,
+    "State_Min": "Boise",
+    "State_Max": "HartfordSpringfield"
+  },
+  {
+    "month_year": "2016-01",
+    "type": "Conventional",
+    "ASP_min": 0.59,
+    "ASP_max": 1.39,
+    "State_Min": "PhoenixTucson",
+    "State_Max": "BuffaloRochester"
+  },
+  {
+    "month_year": "2016-01",
+    "type": "Organic",
+    "ASP_min": 0.68,
+    "ASP_max": 2.3,
+    "State_Min": "StLouis",
+    "State_Max": "SanFrancisco"
+  },
+  {
+    "month_year": "2016-02",
+    "type": "Conventional",
+    "ASP_min": 0.54,
+    "ASP_max": 1.34,
+    "State_Min": "Jacksonville",
+    "State_Max": "SanFrancisco"
+  },
+  {
+    "month_year": "2016-02",
+    "type": "Organic",
+    "ASP_min": 0.82,
+    "ASP_max": 2.38,
+    "State_Min": "StLouis",
+    "State_Max": "SanFrancisco"
+  },
+  {
+    "month_year": "2016-03",
+    "type": "Conventional",
+    "ASP_min": 0.51,
+    "ASP_max": 1.49,
+    "State_Min": "PhoenixTucson",
+    "State_Max": "Albany"
+  },
+  {
+    "month_year": "2016-03",
+    "type": "Organic",
+    "ASP_min": 0.66,
+    "ASP_max": 2.33,
+    "State_Min": "Denver",
+    "State_Max": "SanFrancisco"
+  },
+  {
+    "month_year": "2016-04",
+    "type": "Conventional",
+    "ASP_min": 0.54,
+    "ASP_max": 1.46,
+    "State_Min": "PhoenixTucson",
+    "State_Max": "Albany"
+  },
+  {
+    "month_year": "2016-04",
+    "type": "Organic",
+    "ASP_min": 0.58,
+    "ASP_max": 2.33,
+    "State_Min": "StLouis",
+    "State_Max": "HartfordSpringfield"
+  },
+  {
+    "month_year": "2016-05",
+    "type": "Conventional",
+    "ASP_min": 0.55,
+    "ASP_max": 1.49,
+    "State_Min": "PhoenixTucson",
+    "State_Max": "Albany"
+  },
+  {
+    "month_year": "2016-05",
+    "type": "Organic",
+    "ASP_min": 0.7,
+    "ASP_max": 2.4,
+    "State_Min": "Denver",
+    "State_Max": "HartfordSpringfield"
+  },
+  {
+    "month_year": "2016-06",
+    "type": "Conventional",
+    "ASP_min": 0.6,
+    "ASP_max": 1.5,
+    "State_Min": "PhoenixTucson",
+    "State_Max": "SanFrancisco"
+  },
+  {
+    "month_year": "2016-06",
+    "type": "Organic",
+    "ASP_min": 0.73,
+    "ASP_max": 2.32,
+    "State_Min": "Detroit",
+    "State_Max": "HartfordSpringfield"
+  },
+  {
+    "month_year": "2016-07",
+    "type": "Conventional",
+    "ASP_min": 0.7,
+    "ASP_max": 1.72,
+    "State_Min": "Boise",
+    "State_Max": "HartfordSpringfield"
+  },
+  {
+    "month_year": "2016-07",
+    "type": "Organic",
+    "ASP_min": 0.85,
+    "ASP_max": 2.41,
+    "State_Min": "Atlanta",
+    "State_Max": "NewYork"
+  },
+  {
+    "month_year": "2016-08",
+    "type": "Conventional",
+    "ASP_min": 0.58,
+    "ASP_max": 1.68,
+    "State_Min": "PhoenixTucson",
+    "State_Max": "Chicago"
+  },
+  {
+    "month_year": "2016-08",
+    "type": "Organic",
+    "ASP_min": 0.77,
+    "ASP_max": 2.51,
+    "State_Min": "CincinnatiDayton",
+    "State_Max": "Spokane"
+  },
+  {
+    "month_year": "2016-09",
+    "type": "Conventional",
+    "ASP_min": 0.64,
+    "ASP_max": 1.8,
+    "State_Min": "PhoenixTucson",
+    "State_Max": "Chicago"
+  },
+  {
+    "month_year": "2016-09",
+    "type": "Organic",
+    "ASP_min": 0.87,
+    "ASP_max": 2.91,
+    "State_Min": "Houston",
+    "State_Max": "LasVegas"
+  },
+  {
+    "month_year": "2016-10",
+    "type": "Conventional",
+    "ASP_min": 0.83,
+    "ASP_max": 2.2,
+    "State_Min": "Portland",
+    "State_Max": "SanFrancisco"
+  },
+  {
+    "month_year": "2016-10",
+    "type": "Organic",
+    "ASP_min": 0.68,
+    "ASP_max": 3.25,
+    "State_Min": "Nashville",
+    "State_Max": "SanFrancisco"
+  },
+  {
+    "month_year": "2016-11",
+    "type": "Conventional",
+    "ASP_min": 0.7,
+    "ASP_max": 2.07,
+    "State_Min": "PhoenixTucson",
+    "State_Max": "SanFrancisco"
+  },
+  {
+    "month_year": "2016-11",
+    "type": "Organic",
+    "ASP_min": 0.79,
+    "ASP_max": 3.12,
+    "State_Min": "CincinnatiDayton",
+    "State_Max": "SanFrancisco"
+  },
+  {
+    "month_year": "2016-12",
+    "type": "Conventional",
+    "ASP_min": 0.56,
+    "ASP_max": 1.66,
+    "State_Min": "PhoenixTucson",
+    "State_Max": "BuffaloRochester"
+  },
+  {
+    "month_year": "2016-12",
+    "type": "Organic",
+    "ASP_min": 0.64,
+    "ASP_max": 2.67,
+    "State_Min": "CincinnatiDayton",
+    "State_Max": "SanFrancisco"
+  },
+  {
+    "month_year": "2017-01",
+    "type": "Conventional",
+    "ASP_min": 0.51,
+    "ASP_max": 1.64,
+    "State_Min": "Houston",
+    "State_Max": "Hartford/Springfield"
+  },
+  {
+    "month_year": "2017-01",
+    "type": "Organic",
+    "ASP_min": 0.73,
+    "ASP_max": 2.7,
+    "State_Min": "Denver",
+    "State_Max": "San Francisco"
+  },
+  {
+    "month_year": "2017-02",
+    "type": "Conventional",
+    "ASP_min": 0.46,
+    "ASP_max": 1.71,
+    "State_Min": "Phoenix/Tucson",
+    "State_Max": "Syracuse"
+  },
+  {
+    "month_year": "2017-02",
+    "type": "Organic",
+    "ASP_min": 0.49,
+    "ASP_max": 2.59,
+    "State_Min": "Cincinnati/Dayton",
+    "State_Max": "San Francisco"
+  },
+  {
+    "month_year": "2017-03",
+    "type": "Conventional",
+    "ASP_min": 0.57,
+    "ASP_max": 1.8,
+    "State_Min": "Phoenix/Tucson",
+    "State_Max": "San Francisco"
+  },
+  {
+    "month_year": "2017-03",
+    "type": "Organic",
+    "ASP_min": 0.44,
+    "ASP_max": 3.05,
+    "State_Min": "Cincinnati/Dayton",
+    "State_Max": "Miami/Ft. Lauderdale"
+  },
+  {
+    "month_year": "2017-04",
+    "type": "Conventional",
+    "ASP_min": 0.65,
+    "ASP_max": 1.93,
+    "State_Min": "Phoenix/Tucson",
+    "State_Max": "San Francisco"
+  },
+  {
+    "month_year": "2017-04",
+    "type": "Organic",
+    "ASP_min": 0.78,
+    "ASP_max": 3.17,
+    "State_Min": "Portland",
+    "State_Max": "Tampa"
+  },
+  {
+    "month_year": "2017-05",
+    "type": "Conventional",
+    "ASP_min": 0.6,
+    "ASP_max": 1.88,
+    "State_Min": "Cincinnati/Dayton",
+    "State_Max": "Grand Rapids"
+  },
+  {
+    "month_year": "2017-05",
+    "type": "Organic",
+    "ASP_min": 0.74,
+    "ASP_max": 2.73,
+    "State_Min": "Denver",
+    "State_Max": "San Francisco"
+  },
+  {
+    "month_year": "2017-06",
+    "type": "Conventional",
+    "ASP_min": 0.68,
+    "ASP_max": 1.88,
+    "State_Min": "Phoenix/Tucson",
+    "State_Max": "Grand Rapids"
+  },
+  {
+    "month_year": "2017-06",
+    "type": "Organic",
+    "ASP_min": 0.77,
+    "ASP_max": 2.77,
+    "State_Min": "Cincinnati/Dayton",
+    "State_Max": "San Francisco"
+  },
+  {
+    "month_year": "2017-07",
+    "type": "Conventional",
+    "ASP_min": 0.7,
+    "ASP_max": 1.76,
+    "State_Min": "Portland",
+    "State_Max": "Hartford/Springfield"
+  },
+  {
+    "month_year": "2017-07",
+    "type": "Organic",
+    "ASP_min": 1.02,
+    "ASP_max": 2.67,
+    "State_Min": "Dallas/Ft. Worth",
+    "State_Max": "Hartford/Springfield"
+  },
+  {
+    "month_year": "2017-08",
+    "type": "Conventional",
+    "ASP_min": 0.94,
+    "ASP_max": 2.09,
+    "State_Min": "Phoenix/Tucson",
+    "State_Max": "San Francisco"
+  },
+  {
+    "month_year": "2017-08",
+    "type": "Organic",
+    "ASP_min": 1.13,
+    "ASP_max": 3.04,
+    "State_Min": "Grand Rapids",
+    "State_Max": "Raleigh/Greensboro"
+  },
+  {
+    "month_year": "2017-09",
+    "type": "Conventional",
+    "ASP_min": 1.1,
+    "ASP_max": 2.15,
+    "State_Min": "Houston",
+    "State_Max": "Charlotte"
+  },
+  {
+    "month_year": "2017-09",
+    "type": "Organic",
+    "ASP_min": 1.26,
+    "ASP_max": 2.97,
+    "State_Min": "Grand Rapids",
+    "State_Max": "Raleigh/Greensboro"
+  },
+  {
+    "month_year": "2017-10",
+    "type": "Conventional",
+    "ASP_min": 0.98,
+    "ASP_max": 2.22,
+    "State_Min": "Phoenix/Tucson",
+    "State_Max": "Charlotte"
+  },
+  {
+    "month_year": "2017-10",
+    "type": "Organic",
+    "ASP_min": 1.32,
+    "ASP_max": 3,
+    "State_Min": "St. Louis",
+    "State_Max": "Portland"
+  },
+  {
+    "month_year": "2017-11",
+    "type": "Conventional",
+    "ASP_min": 0.6,
+    "ASP_max": 1.78,
+    "State_Min": "Phoenix/Tucson",
+    "State_Max": "Chicago"
+  },
+  {
+    "month_year": "2017-11",
+    "type": "Organic",
+    "ASP_min": 1.26,
+    "ASP_max": 2.54,
+    "State_Min": "Buffalo/Rochester",
+    "State_Max": "Spokane"
+  },
+  {
+    "month_year": "2017-12",
+    "type": "Conventional",
+    "ASP_min": 0.64,
+    "ASP_max": 1.64,
+    "State_Min": "Phoenix/Tucson",
+    "State_Max": "Grand Rapids"
+  },
+  {
+    "month_year": "2017-12",
+    "type": "Organic",
+    "ASP_min": 1.07,
+    "ASP_max": 2.27,
+    "State_Min": "Seattle",
+    "State_Max": "San Francisco"
+  },
+  {
+    "month_year": "2019-01",
+    "type": "Conventional",
+    "ASP_min": 0.62,
+    "ASP_max": 1.53,
+    "State_Min": "Houston",
+    "State_Max": "Grand Rapids"
+  },
+  {
+    "month_year": "2019-01",
+    "type": "Organic",
+    "ASP_min": 1.07,
+    "ASP_max": 2.5,
+    "State_Min": "Buffalo/Rochester",
+    "State_Max": "San Francisco"
+  },
+  {
+    "month_year": "2019-02",
+    "type": "Conventional",
+    "ASP_min": 0.61,
+    "ASP_max": 1.45,
+    "State_Min": "Phoenix/Tucson",
+    "State_Max": "Seattle"
+  },
+  {
+    "month_year": "2019-02",
+    "type": "Organic",
+    "ASP_min": 0.95,
+    "ASP_max": 1.98,
+    "State_Min": "Grand Rapids",
+    "State_Max": "Seattle"
+  },
+  {
+    "month_year": "2019-03",
+    "type": "Conventional",
+    "ASP_min": 0.54,
+    "ASP_max": 1.5,
+    "State_Min": "Houston",
+    "State_Max": "Grand Rapids"
+  },
+  {
+    "month_year": "2019-03",
+    "type": "Organic",
+    "ASP_min": 1.02,
+    "ASP_max": 2.27,
+    "State_Min": "New Orleans/Mobile",
+    "State_Max": "Raleigh/Greensboro"
+  },
+  {
+    "month_year": "2019-04",
+    "type": "Conventional",
+    "ASP_min": 0.73,
+    "ASP_max": 1.82,
+    "State_Min": "Dallas/Ft. Worth",
+    "State_Max": "Seattle"
+  },
+  {
+    "month_year": "2019-04",
+    "type": "Organic",
+    "ASP_min": 1.03,
+    "ASP_max": 2.32,
+    "State_Min": "New Orleans/Mobile",
+    "State_Max": "Portland"
+  },
+  {
+    "month_year": "2019-05",
+    "type": "Conventional",
+    "ASP_min": 0.83,
+    "ASP_max": 1.79,
+    "State_Min": "Houston",
+    "State_Max": "San Francisco"
+  },
+  {
+    "month_year": "2019-05",
+    "type": "Organic",
+    "ASP_min": 0.93,
+    "ASP_max": 2.37,
+    "State_Min": "New Orleans/Mobile",
+    "State_Max": "Portland"
+  },
+  {
+    "month_year": "2019-06",
+    "type": "Conventional",
+    "ASP_min": 0.95,
+    "ASP_max": 1.98,
+    "State_Min": "Columbus",
+    "State_Max": "Seattle"
+  },
+  {
+    "month_year": "2019-06",
+    "type": "Organic",
+    "ASP_min": 0.9,
+    "ASP_max": 2.54,
+    "State_Min": "Tampa",
+    "State_Max": "Spokane"
+  },
+  {
+    "month_year": "2019-07",
+    "type": "Conventional",
+    "ASP_min": 1,
+    "ASP_max": 2.02,
+    "State_Min": "Harrisburg/Scranton",
+    "State_Max": "Seattle"
+  },
+  {
+    "month_year": "2019-07",
+    "type": "Organic",
+    "ASP_min": 0.99,
+    "ASP_max": 2.78,
+    "State_Min": "Orlando",
+    "State_Max": "San Diego"
+  },
+  {
+    "month_year": "2019-08",
+    "type": "Conventional",
+    "ASP_min": 0.77,
+    "ASP_max": 1.87,
+    "State_Min": "Houston",
+    "State_Max": "Seattle"
+  },
+  {
+    "month_year": "2019-08",
+    "type": "Organic",
+    "ASP_min": 0.91,
+    "ASP_max": 2.73,
+    "State_Min": "Tampa",
+    "State_Max": "Raleigh/Greensboro"
+  },
+  {
+    "month_year": "2019-09",
+    "type": "Conventional",
+    "ASP_min": 0.82,
+    "ASP_max": 1.86,
+    "State_Min": "Houston",
+    "State_Max": "Seattle"
+  },
+  {
+    "month_year": "2019-09",
+    "type": "Organic",
+    "ASP_min": 0.95,
+    "ASP_max": 2.71,
+    "State_Min": "Detroit",
+    "State_Max": "Raleigh/Greensboro"
+  },
+  {
+    "month_year": "2019-10",
+    "type": "Conventional",
+    "ASP_min": 0.77,
+    "ASP_max": 1.56,
+    "State_Min": "Phoenix/Tucson",
+    "State_Max": "Seattle"
+  },
+  {
+    "month_year": "2019-10",
+    "type": "Organic",
+    "ASP_min": 0.77,
+    "ASP_max": 2.15,
+    "State_Min": "Indianapolis",
+    "State_Max": "Raleigh/Greensboro"
+  },
+  {
+    "month_year": "2019-11",
+    "type": "Conventional",
+    "ASP_min": 0.61,
+    "ASP_max": 1.5,
+    "State_Min": "Houston",
+    "State_Max": "Sacramento"
+  },
+  {
+    "month_year": "2019-11",
+    "type": "Organic",
+    "ASP_min": 0.88,
+    "ASP_max": 2.34,
+    "State_Min": "Columbus",
+    "State_Max": "Raleigh/Greensboro"
+  },
+  {
+    "month_year": "2019-12",
+    "type": "Conventional",
+    "ASP_min": 0.64,
+    "ASP_max": 1.54,
+    "State_Min": "Chicago",
+    "State_Max": "San Francisco"
+  },
+  {
+    "month_year": "2019-12",
+    "type": "Organic",
+    "ASP_min": 0.72,
+    "ASP_max": 2.31,
+    "State_Min": "Detroit",
+    "State_Max": "Raleigh/Greensboro"
+  },
+  {
+    "month_year": "2020-01",
+    "type": "Conventional",
+    "ASP_min": 0.65,
+    "ASP_max": 1.53,
+    "State_Min": "Dallas/Ft. Worth",
+    "State_Max": "San Francisco"
+  },
+  {
+    "month_year": "2020-01",
+    "type": "Organic",
+    "ASP_min": 0.85,
+    "ASP_max": 2.09,
+    "State_Min": "Grand Rapids",
+    "State_Max": "St. Louis"
+  }
+]
