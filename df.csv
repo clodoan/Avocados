@@ -1,4 +1,4 @@
-month_year,type,ASP_min,ASP_max,State_Min,State_Max
+month_year,type,"('ASP', 'min')","('ASP', 'max')",State_Min,State_Max
 2015-01,Conventional,0.61,1.54,PhoenixTucson,Pittsburgh
 2015-01,Organic,0.98,2.35,NewOrleansMobile,HartfordSpringfield
 2015-02,Conventional,0.56,1.44,PhoenixTucson,BuffaloRochester
