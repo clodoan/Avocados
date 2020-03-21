@@ -2,130 +2,129 @@
 <head>
     <meta charset="utf-8">
     <script src="https://d3js.org/d3.v3.min.js"> </script>
-    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+<<<<<<< HEAD
+<<<<<<< HEAD
     <style>
        body {
            font-family: "Source-Sans-Pro", sans-serif;
        }
-
        .bar {
            fill: #568203;
        }
-
        .axis {
            font-size: 13px;
        }
-
        .axis path,
        .axis line {
            fill: none;
            display: none;
        }
-
        .label {
            font-size: 13px;
        }
    </style>
+
 </head>
 
 <body>
   <script>
 
-    d3.json("df.json", function(error, json) {
+   d3.json("df.json", function(error, json) {
 
-      if (error) {
-        console.log("error data");
-      } else {
-        data = json
-        console.log(data);
-      }
+     if (error) {
+       console.log("error data");
+     } else {
+       data = json
+       console.log(data);
+     }
 
-    var margin = {
-      top: 8,
-      right: 25,
-      bottom: 15,
-      left: 60
-    };
+   var margin = {
+     top: 8,
+     right: 25,
+     bottom: 15,
+     left: 60
+   };
 
-    var width = 1200 - margin.left - margin.right,
-        height = 2200 - margin.top - margin.bottom;
+   var width = 1200 - margin.left - margin.right,
+       height = 2200 - margin.top - margin.bottom;
 
-    var xscale = d3.scale.linear()
-      .domain([0, 3])
-      .range([0, 722]);
+   var xscale = d3.scale.linear()
+     .domain([0, 3])
+     .range([0, 722]);
 
-    var yscale = d3.scale.linear()
-      .domain([0, json.length])
-      .range([0, 480]);
+   var yscale = d3.scale.linear()
+     .domain([0, json.length])
+     .range([0, 480]);
 
-    var svg = d3.select("body").append("svg")
-      .attr("width", xscale)
-      .attr("height", height + margin.top + margin.bottom)
-      .append("g")
-      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+   var svg = d3.select("body").append("svg")
+     .attr("width", xscale)
+     .attr("height", height + margin.top + margin.bottom)
+     .append("g")
+     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    var x = d3.scale.linear()
-      .range([0, width])
-      .domain([0, d3.max(data, function (d) {
-        return d.ASP_max;
-      })]);
+   var x = d3.scale.linear()
+     .range([0, width])
+     .domain([0, d3.max(data, function (d) {
+       return d.ASP_max;
+     })]);
 
-    var y = d3.scale.ordinal()
-      .rangeRoundBands([height, 0], .1)
-      .domain(data.map(function (d) {
-        return d.month_year;
-    }));
+   var y = d3.scale.ordinal()
+     .rangeRoundBands([height, 0], .1)
+     .domain(data.map(function (d) {
+       return d.month_year;
+   }));
 
-    var y1 = d3.scale.ordinal();
+   var y1 = d3.scale.ordinal();
 
-    var yAxis = d3.svg.axis()
-      .scale(y)
-      //no tick marks
-      .tickSize(0)
-      .orient("left");
+   var yAxis = d3.svg.axis()
+     .scale(y)
+     //no tick marks
+     .tickSize(0)
+     .orient("left");
 
-    var gy = svg.append("g")
-      .attr("class", "y axis")
-      .call(yAxis)
+   var gy = svg.append("g")
+     .attr("class", "y axis")
+     .call(yAxis)
 
-    var bars = svg.selectAll(".bar")
-      .data(data)
-      .enter()
-      .append("g")
+   var bars = svg.selectAll(".bar")
+     .data(data)
+     .enter()
+     .append("g")
 
-    bars.append("rect")
-      .attr("class", "bar")
-      .attr("y", function (d) {
-        if(d.type = 'Organic') {return y(d.month_year)}
-        else {
-          return y(d.month_year) * 2;}})
-      .attr("height", y.rangeBand())
-      .attr("x", 0)
-      .attr("width", function (d) {
-        return x(d.ASP_max - d.ASP_min);
-      })
-      .attr('x', function(d) {
-        return x(d.ASP_min);
-      });
+   bars.append("rect")
+     .attr("class", "bar")
+     .attr("y", function (d) {
+       if(d.type = 'Organic') {return y(d.month_year)}
+       else {
+         return y(d.month_year) * 2;}})
+     .attr("height", y.rangeBand())
+     .attr("x", 0)
+     .attr("width", function (d) {
+       return x(d.ASP_max - d.ASP_min);
+     })
+     .attr('x', function(d) {
+       return x(d.ASP_min);
+     });
 
-    //add a value label to the right of each bar
-    bars.append("text")
-      .attr("class", "label")
-      // .attr('font-family', 'sans-serif')
-      //y position of the label is halfway down the bar
-      .attr("y", function (d) {
-        return y(d.month_year) + y.rangeBand() / 2 + 4;
-      })
-      //x position is 3 pixels to the right of the bar
-      .attr("x", function (d) {
-        return x(d.ASP_max) + 10;
-      })
-      .text(function (d) {
-        return d.ASP_max;
-      });
+   //add a value label to the right of each bar
+   bars.append("text")
+     .attr("class", "label")
+     // .attr('font-family', 'sans-serif')
+     //y position of the label is halfway down the bar
+     .attr("y", function (d) {
+       return y(d.month_year) + y.rangeBand() / 2 + 4;
+     })
+     //x position is 3 pixels to the right of the bar
+     .attr("x", function (d) {
+       return x(d.ASP_max) + 10;
+     })
+     .text(function (d) {
+       return d.ASP_max;
+     });
 
-    });
-  </script>
+   });
+ </script>
 
-</body
+</body>
