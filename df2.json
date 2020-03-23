@@ -1,20 +1,21 @@
 [
   {
     "month_year": "2015-01",
-    "type": "Conventional",
-    "ASP_min": 0.61,
-    "ASP_max": 1.54,
-    "State_Min": "PhoenixTucson",
-    "State_Max": "Pittsburgh"
+    "types": [
+      {"type": "Conventional",
+      "ASP_min": 0.61,
+      "ASP_max": 1.54,
+      "State_Min": "PhoenixTucson",
+      "State_Max": "Pittsburgh"},
+
+      {"type": "Organic",
+      "ASP_min": 0.98,
+      "ASP_max": 2.35,
+      "State_Min": "NewOrleansMobile",
+      "State_Max": "HartfordSpringfield"
+    ]
   },
-  {
-    "month_year": "2015-01",
-    "type": "Organic",
-    "ASP_min": 0.98,
-    "ASP_max": 2.35,
-    "State_Min": "NewOrleansMobile",
-    "State_Max": "HartfordSpringfield"
-  },
+
   {
     "month_year": "2015-02",
     "type": "Conventional",

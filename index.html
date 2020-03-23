@@ -4,8 +4,6 @@
     <script src="https://d3js.org/d3.v3.min.js"> </script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-<<<<<<< HEAD
-<<<<<<< HEAD
     <style>
        body {
            font-family: "Source-Sans-Pro", sans-serif;
@@ -47,6 +45,9 @@
      left: 60
    };
 
+   var barHeight = 10,
+      gapBetweenGroups = 10;
+
    var width = 1200 - margin.left - margin.right,
        height = 2200 - margin.top - margin.bottom;
 
@@ -58,6 +59,7 @@
      .domain([0, json.length])
      .range([0, 480]);
 
+//creates main svg
    var svg = d3.select("body").append("svg")
      .attr("width", xscale)
      .attr("height", height + margin.top + margin.bottom)
@@ -71,10 +73,10 @@
      })]);
 
    var y = d3.scale.ordinal()
-     .rangeRoundBands([height, 0], .1)
+     .rangeRoundBands([height, 0], .2)
      .domain(data.map(function (d) {
        return d.month_year;
-   }));
+     }))
 
    var y1 = d3.scale.ordinal();
 
@@ -96,22 +98,25 @@
    bars.append("rect")
      .attr("class", "bar")
      .attr("y", function (d) {
-       if(d.type = 'Organic') {return y(d.month_year)}
-       else {
-         return y(d.month_year) * 2;}})
+        return y(d.month_year)})
+     // .attr("y", function (d) {
+     //   if (d.type = "Conventional") {
+     //     return y(d.month_year) + 16
+     //   } else {
+     //     return y(d.month_year)})
+     //   })
      .attr("height", y.rangeBand())
      .attr("x", 0)
      .attr("width", function (d) {
        return x(d.ASP_max - d.ASP_min);
      })
-     .attr('x', function(d) {
+     .attr("x", function(d) {
        return x(d.ASP_min);
      });
 
    //add a value label to the right of each bar
    bars.append("text")
      .attr("class", "label")
-     // .attr('font-family', 'sans-serif')
      //y position of the label is halfway down the bar
      .attr("y", function (d) {
        return y(d.month_year) + y.rangeBand() / 2 + 4;
@@ -121,8 +126,22 @@
        return x(d.ASP_max) + 10;
      })
      .text(function (d) {
-       return d.ASP_max;
+       return d.ASP_max + " (" + d.State_Max + ")";
      });
+
+     bars.append("text")
+       .attr("class", "label")
+       //y position of the label is halfway down the bar
+       .attr("y", function (d) {
+         return y(d.month_year) + y.rangeBand() / 2 + 4;
+       })
+       //x position is 3 pixels to the right of the bar
+       .attr("x", function (d) {
+         return x(d.ASP_min) +  10;
+       })
+       .text(function (d) {
+         return d.ASP_min + " (" + d.State_Min + ")";
+       });
 
    });
  </script>
