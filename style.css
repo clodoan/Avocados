@@ -1,10 +1,31 @@
-.label {
-  /* display: inline-block; */
-  background-color: #568203;
-  height: 2px
-  font-family: sans-serif;
+/* body {
+    font-family: "Source-Sans-Pro", sans-serif;
 }
 
-.barOrganic {
-      fill: #cc0;
+.axis {
+    font-size: 13px;
 }
+.axis path,
+.axis line {
+    fill: none;
+    display: none;
+}
+.label {
+    font-size: 13px;
+ }
+
+.bar {
+    fill: #568203;
+}
+
+.organic {
+  fill: #cc0
+}
+
+.bar:hover {
+  fill: orange;
+}
+
+.bar:hover label {
+  display: inline;
+} */

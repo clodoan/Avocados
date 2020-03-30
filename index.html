@@ -8,13 +8,7 @@
        body {
            font-family: "Source-Sans-Pro", sans-serif;
        }
-       .bar {
-           fill: #568203;
-       }
 
-       .Organic {
-         fill: #cc0
-       }
        .axis {
            font-size: 13px;
        }
@@ -23,9 +17,27 @@
            fill: none;
            display: none;
        }
+
        .label {
            font-size: 13px;
+        }
+
+       .bar {
+           fill: #568203;
        }
+
+       .organic {
+         fill: #cc0
+       }
+
+       .bar:hover {
+         fill: orange;
+       }
+
+       .bar:hover label {
+         display: inline;
+       }
+
    </style>
 
 </head>
@@ -43,21 +55,21 @@
      }
 
    var margin = {
-     top: 8,
-     right: 25,
+     top: 24,
+     right: 12,
      bottom: 15,
      left: 60
    };
 
    var barHeight = 10,
-      gapBetweenGroups = 10;
+      gapBetweenGroups = 40;
 
    var width = 1200 - margin.left - margin.right,
        height = 2200 - margin.top - margin.bottom;
 
    var xscale = d3.scale.linear()
      .domain([0, 3])
-     .range([0, 722]);
+     .range([0, 822]);
 
    var yscale = d3.scale.linear()
      .domain([0, json.length])
@@ -84,21 +96,32 @@
 
    var y1 = d3.scale.ordinal();
 
+//creates the axis
    var yAxis = d3.svg.axis()
      .scale(y)
      //no tick marks
      .tickSize(0)
      .orient("left");
 
-   var gy = svg.append("g")
+  var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom")
+
+  var gy = svg.append("g")
      .attr("class", "y axis")
      .call(yAxis)
 
-   var bars = svg.selectAll(".bar")
-     .data(data)
-     .enter()
-     .append("g")
+  var gx = svg.append("g")
+    .attr("class", "x axis")
+    .attr('transform', 'translate(0,' + (- barHeight) + ')')
+    .call(xAxis)
 
+  var bars = svg.selectAll(".bar")
+    .data(data)
+    .enter()
+    .append("g")
+
+//creates the rectangles
    bars.append("rect")
       .attr("class", function (d) { return "bar "+ d.type})
       .attr("y", function (d) {
@@ -117,28 +140,29 @@
       .attr("x", function(d) {
         return x(d.ASP_min);
       })
-      ;
+    });
+
 
     //add a value label to the right of each bar
-    bars.append("text")
-      .attr("class", "label")
-      .attr("dy", 12)
-      .attr("y", function (d) {
-       if (d.type == "Organic") {
-           return y(d.month_year)
-         }
-         else {
-           return y(d.month_year) + 19
-         }
-        // return y(d.month_year) + y.rangeBand() / 2 + 4;
-      })
-      //x position is 3 pixels to the right of the bar
-      .attr("x", function (d) {
-        return x(d.ASP_max) + 64;
-      })
-      .text(function (d) {
-        return d.ASP_max + " (" + d.State_Max + ")";
-      });
+  bars.append("text")
+    .attr("class", "label")
+    .attr("dy", 12)
+    .attr("y", function (d) {
+     if (d.type == "Organic") {
+         return y(d.month_year)
+       }
+       else {
+         return y(d.month_year) + 19
+       }
+      // return y(d.month_year) + y.rangeBand() / 2 + 4;
+    })
+    //x position is 3 pixels to the right of the bar
+    .attr("x", function (d) {
+      return x(d.ASP_max) + 64;
+    })
+    .text(function (d) {
+      return d.ASP_max + " (" + d.State_Max + ")";
+    });
 
     bars.append("text")
       .attr("text-anchor", "end")
@@ -151,16 +175,13 @@
        else {
          return y(d.month_year) + 19
        }
-      // return y(d.month_year) + y.rangeBand() / 2 + 4;
       })
-      //x position is 3 pixels to the right of the bar
       .attr("x", function (d) {
-        return x(d.ASP_min) - 16;
+        return x(d.ASP_min) - 8;
       })
       .text(function (d) {
-        return d.ASP_min + " (" + d.State_Min + ")";
-      });
-
+        return "(" + d.State_Min + ") " + d.ASP_min;
+      })
    });
  </script>
 
