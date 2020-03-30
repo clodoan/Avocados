@@ -3,47 +3,60 @@
     <meta charset="utf-8">
     <script src="https://d3js.org/d3.v3.min.js"> </script>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <style>
-       body {
-           font-family: "Source-Sans-Pro", sans-serif;
-       }
-       .bar {
-           fill: #568203;
-       }
-
-       .bar:hover {
-        fill: orange;
-      }
-
-      .wrapper:hover .label{
-        opacity: 1.0;
-      }
-
-       .Organic {
-           fill: #cc0;
-       }
-       .axis {
-           font-size: 13px;
-       }
-       .axis path,
-       .axis line {
-           fill: none;
-           display: none;
-       }
-
-       .label {
-         font-size: 13px;
-         opacity: 0.0;
-       }
-
-   </style>
-
 </head>
 
-<body>
-  <script>
+<style>
+  body {
+      font-family: "Source-Sans-Pro", sans-serif;
+  }
+  .bar {
+      fill: #568203;
+  }
 
+  .wrapper {
+    border-bottom: 1px solid grey;
+  }
+
+  .bar:hover {
+   fill: orange;
+  }
+
+  .wrapper:hover .label{
+   opacity: 1.0;
+  }
+
+  .Organic {
+      fill: #cc0;
+  }
+  .axis {
+      font-size: 13px;
+  }
+  .axis path,
+  .axis line {
+      fill: none;
+      display: none;
+  }
+
+  .label {
+    font-size: 13px;
+    opacity: 0.0;
+  }
+
+  .content {
+    margin-left: 32px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+</style>
+
+<body>
+  <div class="content">
+    <h1> Spread of avocado prices from 2015 to 2020 in the U.S.</h1>
+    <p> Each bar represents the difference between the minimum and maximum retail price for organic and conventional avocados in the U.S.<p>
+  </div>
+
+  <script>
    d3.json("df.json", function(error, json) {
 
      if (error) {
@@ -120,6 +133,48 @@
     .append("g")
     .attr("class", "wrapper")
 
+//legends
+
+  var keys = ["Organic", "Conventional"]
+  var colors = ["#cc0", "#568203"]
+
+  // Add one dot in the legend for each name.
+  svg.selectAll("mydots")
+    .data(keys)
+    .enter()
+    .append("circle")
+      .attr("cx", width - margin.right)
+      .attr("cy", function(d,i){ return 46 + i*25}) // 100 is where the first dot appears. 25 is the distance between dots
+      .attr("r", 7)
+      .style("fill", function(d){
+        if (d == "Organic") {
+          return "#cc0"
+        }
+        else {
+          return "#568203"
+        }
+      })
+
+  // Add one dot in the legend for each name.
+  svg.selectAll("mylabels")
+    .data(keys)
+    .enter()
+    .append("text")
+      .attr("x", width - margin.right + 20)
+      .attr("y", function(d,i){return 48 + i*25}) // 100 is where the first dot appears. 25 is the distance between dots
+      .style("fill", function(d){
+        if (d == "Organic") {
+          return "#cc0"
+        }
+        else {
+          return "#568203"
+        }
+      })
+      .text(function(d){return d})
+      .attr("text-anchor", "left")
+      .style("alignment-baseline", "middle")
+
+
    bars.append("rect")
      .attr("class", function (d) {return "bar "+ d.type})
      .attr("y", function (d) {
@@ -130,10 +185,6 @@
           return y(d.month_year) + 19
         }
       })
-    // .on("mouseover", function() {
-    //       d3.select(this)
-    //       	.attr("fill", "red");
-    //   })
      .attr("height", y.rangeBand()/2)
      .attr("x", 0)
      .attr("width", function (d) {
@@ -143,9 +194,8 @@
        return x(d.ASP_min)});
 
 
-   //add a value label to the right of each bar
+//add a value label to the right of each bar
    bars.append("text")
-    // .attr("visibility", "hidden")
     .attr("class", "label")
     .attr("dy", 12)
     .attr("y", function (d) {
@@ -155,9 +205,7 @@
       else {
         return y(d.month_year) + 19
       }
-       // return y(d.month_year) + y.rangeBand() / 2 + 4;
      })
-     //x position is 3 pixels to the right of the bar
      .attr("x", function (d) {
        return x(d.ASP_max) + 8;
      })
@@ -165,25 +213,24 @@
        return "($" + d.ASP_max + ") " + d.State_Max;
      });
 
-     bars.append("text")
-      // .attr("visibility", "hidden")
-      .attr("text-anchor", "end")
-      .attr("class", "label")
-      .attr("dy", 12)
-      .attr("y", function (d) {
-        if (d.type == "Organic") {
-          return y(d.month_year)
-        }
-        else {
-          return y(d.month_year) + 19
-        }
-       })
-       .attr("x", function (d) {
-         return x(d.ASP_min) - 8;
-       })
-       .text(function (d) {
-         return  d.State_Min + " ($" + d.ASP_min + ")";
-       });
+   bars.append("text")
+    .attr("text-anchor", "end")
+    .attr("class", "label")
+    .attr("dy", 12)
+    .attr("y", function (d) {
+      if (d.type == "Organic") {
+        return y(d.month_year)
+      }
+      else {
+        return y(d.month_year) + 19
+      }
+     })
+     .attr("x", function (d) {
+       return x(d.ASP_min) - 8;
+     })
+     .text(function (d) {
+       return  d.State_Min + " ($" + d.ASP_min + ")";
+     });
    });
  </script>
 
