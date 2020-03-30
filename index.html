@@ -8,13 +8,9 @@
        body {
            font-family: "Source-Sans-Pro", sans-serif;
        }
-<<<<<<< HEAD
-
-=======
        .bar {
            fill: #568203;
        }
->>>>>>> parent of 29e6caa... fixed labels and heights
        .axis {
            font-size: 13px;
        }
@@ -168,7 +164,6 @@
        .attr("y", function (d) {
          return y(d.month_year) + y.rangeBand() / 2 + 4;
        })
-<<<<<<< HEAD
       .attr("height", y.rangeBand()/2)
       .attr("x", 0)
       .attr("width", function (d) {
@@ -219,7 +214,7 @@
       .text(function (d) {
         return "(" + d.State_Min + ") " + d.ASP_min;
       })
-=======
+
        //x position is 3 pixels to the right of the bar
        .attr("x", function (d) {
          return x(d.ASP_min) +  10;
@@ -228,8 +223,7 @@
          return d.ASP_min + " (" + d.State_Min + ")";
        });
 
->>>>>>> parent of 29e6caa... fixed labels and heights
-   });
+   ;
  </script>
 
 </body>
