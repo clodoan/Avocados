@@ -8,7 +8,13 @@
        body {
            font-family: "Source-Sans-Pro", sans-serif;
        }
+<<<<<<< HEAD
 
+=======
+       .bar {
+           fill: #568203;
+       }
+>>>>>>> parent of 29e6caa... fixed labels and heights
        .axis {
            font-size: 13px;
        }
@@ -83,7 +89,7 @@
      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
    var x = d3.scale.linear()
-     .range([margin.left, width])
+     .range([0, width])
      .domain([0, d3.max(data, function (d) {
        return d.ASP_max;
      })]);
@@ -123,15 +129,46 @@
 
 //creates the rectangles
    bars.append("rect")
-      .attr("class", function (d) { return "bar "+ d.type})
-      .attr("y", function (d) {
-         if (d.type == "Organic") {
-           return y(d.month_year)
-         }
-         else {
-           return y(d.month_year) + 19
-         }
+     .attr("class", "bar")
+     .attr("y", function (d) {
+        return y(d.month_year)})
+     // .attr("y", function (d) {
+     //   if (d.type = "Conventional") {
+     //     return y(d.month_year) + 16
+     //   } else {
+     //     return y(d.month_year)})
+     //   })
+     .attr("height", y.rangeBand())
+     .attr("x", 0)
+     .attr("width", function (d) {
+       return x(d.ASP_max - d.ASP_min);
+     })
+     .attr("x", function(d) {
+       return x(d.ASP_min);
+     });
+
+   //add a value label to the right of each bar
+   bars.append("text")
+     .attr("class", "label")
+     //y position of the label is halfway down the bar
+     .attr("y", function (d) {
+       return y(d.month_year) + y.rangeBand() / 2 + 4;
+     })
+     //x position is 3 pixels to the right of the bar
+     .attr("x", function (d) {
+       return x(d.ASP_max) + 10;
+     })
+     .text(function (d) {
+       return d.ASP_max + " (" + d.State_Max + ")";
+     });
+
+     bars.append("text")
+       .attr("class", "label")
+       //y position of the label is halfway down the bar
+       .attr("y", function (d) {
+         return y(d.month_year) + y.rangeBand() / 2 + 4;
        })
+<<<<<<< HEAD
       .attr("height", y.rangeBand()/2)
       .attr("x", 0)
       .attr("width", function (d) {
@@ -182,6 +219,16 @@
       .text(function (d) {
         return "(" + d.State_Min + ") " + d.ASP_min;
       })
+=======
+       //x position is 3 pixels to the right of the bar
+       .attr("x", function (d) {
+         return x(d.ASP_min) +  10;
+       })
+       .text(function (d) {
+         return d.ASP_min + " (" + d.State_Min + ")";
+       });
+
+>>>>>>> parent of 29e6caa... fixed labels and heights
    });
  </script>
 
